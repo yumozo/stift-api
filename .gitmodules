@@ -1,3 +1,3 @@
-[submodule]
+[submodule "Client"]
   path = Client
   url = git@gitlab.com:gibmirstift/stift-client.git
