@@ -2,3 +2,7 @@
 /bin/
 /obj/
 worklog.md
+
+*/**/node_modules
+
+/Client/
