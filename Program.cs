@@ -21,9 +21,20 @@ else
 
 // Added stuff
   // AddIdentity registers the services
-builder.Services.AddIdentity<IdentityUser, IdentityRole>()
+builder.Services.AddIdentity<IdentityUser, IdentityRole>(confing => {
+  confing.Password.RequiredLength = 4; 
+  confing.Password.RequireDigit = false; 
+  confing.Password.RequireNonAlphanumeric = false; 
+  confing.Password.RequireUppercase= false; 
+})
   .AddEntityFrameworkStores<AppDbContext>()
   .AddDefaultTokenProviders();
+
+builder.Services.ConfigureApplicationCookie(options =>
+{
+  options.Cookie.Name = "I LOVE COOKIIIIIIIIIIIIIIIIIIIES";
+  options.LoginPath = "home/login";
+});
 
 builder.Services.AddScoped<IStiftRepo, StiftRepo>();
 //

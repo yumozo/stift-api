@@ -8,15 +8,15 @@ namespace StiftApi.Controllers;
 
 [ApiController]
 [Route("[controller]")]
-public class IdentityController : ControllerBase
+public class ArchiveController : ControllerBase
 {
-  private readonly ILogger<IdentityController> _logger;
+  private readonly ILogger<ArchiveController> _logger;
   private readonly IStiftRepo _repository;
   private readonly IMapper _mapper;
   private readonly IRecordService? _recordService;
 
-  public IdentityController(
-    ILogger<IdentityController> logger,
+  public ArchiveController(
+    ILogger<ArchiveController> logger,
     IStiftRepo repo,
     IMapper mapper
     )
