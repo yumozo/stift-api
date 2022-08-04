@@ -2,7 +2,7 @@ using StiftApi.Models;
 
 namespace StiftApi.Data
 {
-  public class StiftRepo : IStiftRepo
+  public class StiftRepo : IRecordRepo
   {
     private readonly AppDbContext _context;
 

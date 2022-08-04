@@ -36,7 +36,7 @@ builder.Services.ConfigureApplicationCookie(options =>
   options.LoginPath = "home/login";
 });
 
-builder.Services.AddScoped<IStiftRepo, StiftRepo>();
+builder.Services.AddScoped<IRecordRepo, StiftRepo>();
 //
 
 builder.Services.AddControllersWithViews();

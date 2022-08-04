@@ -2,7 +2,7 @@ using StiftApi.Models;
 
 namespace StiftApi.Data
 {
-  public interface IStiftRepo
+  public interface IRecordRepo
   {
     bool SaveChanges();
     IEnumerable<IRecord> GetAllRecords();

@@ -11,13 +11,13 @@ namespace StiftApi.Controllers;
 public class ArchiveController : ControllerBase
 {
   private readonly ILogger<ArchiveController> _logger;
-  private readonly IStiftRepo _repository;
+  private readonly IRecordRepo _repository;
   private readonly IMapper _mapper;
   private readonly IRecordService? _recordService;
 
   public ArchiveController(
     ILogger<ArchiveController> logger,
-    IStiftRepo repo,
+    IRecordRepo repo,
     IMapper mapper
     )
   {
@@ -57,7 +57,8 @@ public class ArchiveController : ControllerBase
   //   return null;
   // }
   [HttpPost]
-  public async Task<ActionResult<RecordReadDto>> CreateRecord(RecordCreateDto recordCreateDto)
+  public async Task<ActionResult<RecordReadDto>> CreateRecord(
+    [FromBody]RecordCreateDto recordCreateDto)
   {
     var recordModel = _mapper.Map<Record>(recordCreateDto);
     _repository.AddRecord(recordModel);

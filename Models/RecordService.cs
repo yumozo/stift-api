@@ -4,9 +4,9 @@ namespace StiftApi.Models;
 
 public class RecordService : IRecordService
 {
-  private readonly IStiftRepo _repository;
+  private readonly IRecordRepo _repository;
 
-  public RecordService(IStiftRepo repo)
+  public RecordService(IRecordRepo repo)
   {
     _repository = repo;
   }
